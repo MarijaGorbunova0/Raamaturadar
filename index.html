@@ -34,3 +34,77 @@
     </main>
   </body>
 </html>
+
+<style lang="css">
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #121614;
+    color: #f2ece0;
+    font-family: "Inter", sans-serif;
+  }
+
+  /* Logo */
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #f2ece0;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .logo::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: #d7a152;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* Shared container */
+  .container {
+    width: calc(100% - 64px);
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  /* Navigation */
+  .site-header {
+    width: 100%;
+    border-bottom: 1px solid #d7a152;
+  }
+
+  .nav {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: 62px;
+      font-weight: 600;
+    }
+  }
+
+  /* Tablet */
+  @media (max-width: 991px) {
+    .container {
+      width: calc(100% - 48px);
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 575px) {
+    .container {
+      width: calc(100% - 32px);
+    }
+  }
+</style>
