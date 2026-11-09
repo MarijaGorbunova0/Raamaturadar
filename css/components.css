@@ -64,3 +64,142 @@
 .nav-link.active::after {
   transform: scaleX(1);
 }
+
+/* Hero */
+.hero {
+  margin-top: 124px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero .copy {
+  flex: 1 1 420px;
+  min-width: 0;
+  max-width: none;
+}
+.hero .päeva-raamat {
+  flex: 0 1 500px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero-text {
+  font-size: 24px;
+}
+
+.btn {
+  margin-top: 55px;
+  padding: 18px 30px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--color-accent);
+  color: var(--color-text-secondary);
+}
+
+/* Päeva raamat */
+.päeva-raamat {
+  display: flex;
+  padding: 25px;
+  justify-content: space-between;
+  align-self: center;
+  gap: 35px;
+  background-color: var(--color-component-background);
+  border-radius: 10px;
+
+  .tag {
+    color: var(--color-accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 5%;
+  }
+
+  .pealkiri {
+    margin-top: 15px;
+    color: var(--color-text);
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .autor {
+    margin-top: 10px;
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .ilmumisaasta {
+    margin-top: 10px;
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .vaata-lähemalt {
+    margin-top: 36px;
+  }
+
+  .vaata-lähemalt-link {
+    color: var(--color-accent);
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .vaata-lähemalt-link:hover {
+    color: #ac7e33;
+  }
+
+  .image {
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 15px;
+  }
+}
+
+.päeva-raamat > div:last-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.päeva-raamat .pealkiri {
+  overflow-wrap: break-word;
+}
+
+.cards {
+  margin-top: 100px;
+  display: flex;
+  column-gap: 35px;
+  row-gap: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.card {
+  padding: 35px;
+  background-color: var(--color-component-background);
+  flex-grow: 1;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.card-text {
+  margin: 18px 0 0 0;
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  .cards {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+}
