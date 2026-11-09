@@ -1,9 +1,11 @@
 :root {
   --color-background: #121614;
   --color-text: #f2ece0;
+  --color-text-secondary: #121614;
   --color-accent: #d7a152;
+  --color-component-background: #1f2723;
 
-  --container-width: 1200px;
+  --container-width: 1300px;
 }
 /* BASE*/
 * {
@@ -15,6 +17,14 @@ body {
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* LAYOUT */
