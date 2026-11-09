@@ -1,0 +1,42 @@
+/* Logo */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.logo::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Navigation */
+.site-header {
+  width: 100%;
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.nav {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 62px;
+    font-weight: 600;
+  }
+}
