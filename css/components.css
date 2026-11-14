@@ -281,6 +281,86 @@
   margin-top: 30px;
 }
 
+.raamatu-vaade-layout {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  margin-top: 40px;
+  gap: 48px;
+  align-items: stretch;
+  margin-bottom: 40px;
+}
+
+.tagasi {
+  display: inline-block;
+  margin-top: 40px;
+  color: var(--color-accent);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.raamatu-cover {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.raamatu-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.raamatu-cover-placeholder {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background-color: var(--color-accent);
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.raamatu-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.raamatu-info .card {
+  flex-grow: 1;
+}
+
+.raamatu-pealkiri {
+  margin: 30px 0 24px 0;
+  font-size: 50px;
+}
+
+.book-metadata-item {
+  display: flex;
+  flex-direction: row;
+  column-gap: 25px;
+  padding-bottom: 10px;
+}
+
+.book-metadata-key {
+  width: 40px;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.book-metadata-value {
+  font-weight: 300;
+}
+
+.book-annotation {
+  margin-bottom: 25px;
+  font-weight: 300;
+  font-style: italic;
+}
+
 @media (max-width: 991px) {
   .nav {
     padding: 0 8px;
@@ -301,5 +381,13 @@
   }
   .pill-block {
     grid-template-columns: 1fr;
+  }
+  .raamatu-vaade-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .raamatu-cover {
+    max-width: 280px;
+    margin-inline: auto;
   }
 }
