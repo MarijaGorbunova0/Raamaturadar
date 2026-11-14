@@ -202,6 +202,7 @@
 }
 
 .avasta-raamat-filtrid-nupud {
+  grid-column: 1 / -1;
   margin-left: auto;
   display: flex;
   flex-direction: row;
@@ -225,6 +226,7 @@
   color: var(--color-text);
   text-align: center;
   font-family: "Inter", sans-serif;
+  font-size: 1rem;
 
   background:
     linear-gradient(
@@ -242,11 +244,20 @@
       border-box;
 }
 
+.pill.selected,
+.pill.selected:hover {
+  background: var(--color-accent);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-text-secondary);
+  animation: none;
+  cursor: pointer;
+}
+
 .pill.filled {
   background: var(--color-accent);
   color: var(--color-text-secondary);
-  border-color: var(--color-accent);
-  font-weight: 600;
+  border-color: #ac7e33;
+  font-weight: 700;
   box-shadow: 3px 2px 6px rgb(37, 36, 36);
 }
 
@@ -331,6 +342,7 @@
 
 .raamatu-info .card {
   flex-grow: 1;
+  font-size: 1rem;
 }
 
 .raamatu-pealkiri {
