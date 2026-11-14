@@ -20,11 +20,16 @@ body {
 }
 
 h1 {
+  margin-top: 124px;
   font-size: 70px;
 }
 
 a {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* LAYOUT */

@@ -67,7 +67,6 @@
 
 /* Hero */
 .hero {
-  margin-top: 124px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -196,10 +195,111 @@
   font-size: 18px;
 }
 
+.avasta-raamat-filtrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.avasta-raamat-filtrid-nupud {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 8px;
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.pill {
+  width: fit-content;
+  padding: 12px 20px;
+  border: 1px solid #ffffff;
+  border-radius: 40px;
+  background-color: var(--color-component-background);
+  white-space: nowrap;
+  color: var(--color-text);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+
+  background:
+    linear-gradient(
+        var(--color-component-background),
+        var(--color-component-background)
+      )
+      padding-box,
+    conic-gradient(
+        from var(--border-angle),
+        white 0deg,
+        white 90deg,
+        var(--color-accent) 300deg,
+        white 360deg
+      )
+      border-box;
+}
+
+.pill.filled {
+  background: var(--color-accent);
+  color: var(--color-text-secondary);
+  border-color: var(--color-accent);
+  font-weight: 600;
+  box-shadow: 3px 2px 6px rgb(37, 36, 36);
+}
+
+.pill.filled:hover {
+  color: var(--color-text-secondary);
+  background: #e8b25c;
+}
+
+.pill:hover {
+  border-color: transparent;
+  animation: rotate-border 2.5s linear infinite;
+  color: var(--color-accent);
+}
+
+@keyframes rotate-border {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pill:hover {
+    animation: none;
+  }
+}
+
+.pill-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 30px;
+}
+
 @media (max-width: 991px) {
+  .nav {
+    padding: 0 8px;
+  }
+  .nav-links {
+    gap: 45px;
+  }
+  .avasta-raamat-filtrid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 20px 15px;
+  }
   .cards {
     flex-direction: column;
     align-items: stretch;
     gap: 32px;
+  }
+  .pill-block {
+    grid-template-columns: 1fr;
   }
 }
