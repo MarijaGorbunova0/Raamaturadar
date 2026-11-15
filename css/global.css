@@ -12,11 +12,18 @@
   box-sizing: border-box;
 }
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   background-color: var(--color-background);
   color: var(--color-text);
   font-family: "Inter", sans-serif;
+}
+
+main {
+  flex: 1;
 }
 
 h1 {
