@@ -184,7 +184,7 @@
 
 .cards {
   margin-top: 45px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   display: flex;
   column-gap: 35px;
   row-gap: 20px;
@@ -214,6 +214,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 30px;
+  margin-bottom: 80px;
 }
 
 .avasta-raamat-filtrid-nupud {
@@ -313,7 +314,7 @@
   margin-top: 40px;
   gap: 48px;
   align-items: stretch;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 .tagasi {
