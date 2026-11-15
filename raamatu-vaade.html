@@ -42,6 +42,20 @@
     <header class="site-header">
       <nav class="nav container">
         <a href="/" class="logo">Raamaturadar</a>
+
+        <!-- Mobiilivaate menüü -->
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Ava menüü"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         <div class="nav-links">
           <div>
             <a href="/index.html" class="nav-link">Avaleht</a>
@@ -110,5 +124,34 @@
         <p>&copy; 2026 Raamaturadar. Kõik õigused kaitstud.</p>
       </div>
     </footer>
+
+    <!-- Tehisintellekti abi kasutati kohanduva menüü stiilide interaktsioonide loomiseks -->
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      function setMenuOpen(isOpen) {
+        menuToggle.classList.toggle("is-open", isOpen);
+        navLinks.classList.toggle("is-open", isOpen);
+
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.setAttribute(
+          "aria-label",
+          isOpen ? "Sulge menüü" : "Ava menüü",
+        );
+      }
+
+      menuToggle.addEventListener("click", () => {
+        setMenuOpen(!navLinks.classList.contains("is-open"));
+      });
+
+      navLinks.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => setMenuOpen(false));
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setMenuOpen(false);
+      });
+    </script>
   </body>
 </html>
