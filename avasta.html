@@ -32,10 +32,12 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages/avasta.css" />
 
     <title>Raamaturadar | Avasta</title>
   </head>
 
+  <!-- AI assistance was used to implement basic button interactions. -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".pill-block").forEach((group) => {
@@ -46,12 +48,12 @@
 
           // Eemalda eelmine valik samast grupist
           group.querySelectorAll(".pill").forEach((pill) => {
-            pill.classList.remove("selected");
+            pill.classList.remove("pill--selected");
             pill.setAttribute("aria-pressed", "false");
           });
 
           // Aktiveeri klikitud nupp
-          clickedPill.classList.add("selected");
+          clickedPill.classList.add("pill--selected");
           clickedPill.setAttribute("aria-pressed", "true");
         });
       });
@@ -87,7 +89,9 @@
             <div>
               <div class="card-title">Žanr:</div>
               <div class="pill-block">
-                <button type="button" class="pill selected">Kõik žanrid</button>
+                <button type="button" class="pill pill--selected">
+                  Kõik žanrid
+                </button>
                 <button type="button" class="pill">Fiction</button>
                 <button type="button" class="pill">Thrillers</button>
                 <button type="button" class="pill">Mystery</button>
@@ -103,7 +107,9 @@
             <div>
               <div class="card-title">Keel:</div>
               <div class="pill-block">
-                <button type="button" class="pill selected">Kõik keeled</button>
+                <button type="button" class="pill pill--selected">
+                  Kõik keeled
+                </button>
                 <button type="button" class="pill">Inglise</button>
                 <button type="button" class="pill">Eesti</button>
                 <button type="button" class="pill">Saksa</button>
@@ -114,7 +120,9 @@
             <div>
               <div class="card-title">Ilmumisaasta:</div>
               <div class="pill-block">
-                <button type="button" class="pill selected">Kõik aastad</button>
+                <button type="button" class="pill pill--selected">
+                  Kõik aastad
+                </button>
                 <button type="button" class="pill">2020+</button>
                 <button type="button" class="pill">2010-2019</button>
                 <button type="button" class="pill">2000-2009</button>
@@ -123,7 +131,9 @@
             </div>
             <div class="avasta-raamat-filtrid-nupud">
               <button type="button" class="pill">Feeling lucky</button>
-              <button type="button" class="pill filled">Leia raamat</button>
+              <button type="button" class="pill pill--filled">
+                Leia raamat
+              </button>
             </div>
           </div>
         </section>

@@ -1,0 +1,37 @@
+.avasta-raamat-filtrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.avasta-raamat-filtrid-nupud {
+  grid-column: 1 / -1;
+  margin-left: auto;
+  margin-top: 40px;
+  display: flex;
+  align-items: end;
+  gap: 8px;
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.pill-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+/* RESPONSIVE */
+/* Mobile */
+@media (max-width: 991px) {
+  .avasta-raamat-filtrid {
+    grid-template-columns: 1fr;
+  }
+}

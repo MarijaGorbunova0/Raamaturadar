@@ -1,0 +1,135 @@
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+}
+
+.hero .copy {
+  flex: 1 1 420px;
+  min-width: 0;
+  max-width: none;
+}
+.hero .päeva-raamat {
+  flex: 0 1 500px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.hero-text {
+  font-size: 24px;
+}
+
+/* Päeva raamat */
+.päeva-raamat {
+  display: flex;
+  padding: 25px;
+  justify-content: space-between;
+  align-self: center;
+  gap: 35px;
+  background-color: var(--color-component-background);
+  border-radius: 10px;
+
+  .tag {
+    color: var(--color-accent);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+  .pealkiri {
+    margin-top: 15px;
+    color: var(--color-text);
+    font-size: 28px;
+    font-weight: 600;
+  }
+
+  .autor {
+    margin-top: 10px;
+    color: var(--color-text);
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  .ilmumisaasta {
+    margin-top: 10px;
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .vaata-lähemalt {
+    margin-top: 36px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-accent);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .vaata-lähemalt-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+  }
+
+  .vaata-lähemalt:hover .vaata-lähemalt-icon {
+    transform: translateX(4px);
+  }
+}
+
+.päeva-raamat img {
+  display: block;
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+}
+
+.päeva-raamat > div:first-child {
+  flex: 0 0 120px;
+}
+.päeva-raamat > div:last-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.päeva-raamat .pealkiri {
+  overflow-wrap: break-word;
+}
+
+/* Kuidas raamaturadar töötab? */
+.cards {
+  margin-top: 45px;
+  margin-bottom: 80px;
+  display: flex;
+  column-gap: 35px;
+  row-gap: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* RESPONSIVE */
+/* Mobile */
+@media (max-width: 991px) {
+  .hero {
+    gap: 100px;
+  }
+
+  .hero-text {
+    font-size: 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 32px;
+  }
+
+  .päeva-raamat {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
