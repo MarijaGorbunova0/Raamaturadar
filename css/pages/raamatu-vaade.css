@@ -78,8 +78,8 @@
   font-style: italic;
 }
 
-/* RESPONSIVE */
-/* Mobile */
+/* KOHANDUV KUJUNDUS */
+/* Mobiil */
 @media (max-width: 991px) {
   .raamatu-vaade-layout {
     grid-template-columns: 1fr;

@@ -28,8 +28,8 @@
   margin-top: 30px;
 }
 
-/* RESPONSIVE */
-/* Mobile */
+/* KOHANDUV KUJUDNUS */
+/* Mobiil */
 @media (max-width: 991px) {
   .avasta-raamat-filtrid {
     grid-template-columns: 1fr;

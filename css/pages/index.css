@@ -1,4 +1,4 @@
-/* Hero */
+/* Hero ehk avalõik */
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -100,7 +100,7 @@
   overflow-wrap: break-word;
 }
 
-/* Kuidas raamaturadar töötab? */
+/* "Kuidas raamaturadar töötab?" sektsioon */
 .cards {
   margin-top: 45px;
   margin-bottom: 80px;
@@ -111,8 +111,8 @@
   flex-wrap: nowrap;
 }
 
-/* RESPONSIVE */
-/* Mobile */
+/* KOHANDUV KUJUNDUS */
+/* Mobiil */
 @media (max-width: 991px) {
   .hero {
     gap: 100px;

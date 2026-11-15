@@ -18,7 +18,7 @@
   flex-shrink: 0;
 }
 
-/* Navigation */
+/* Navigatsioon */
 .site-header {
   width: 100%;
   border-bottom: 1px solid var(--color-accent);
@@ -173,8 +173,8 @@
   }
 }
 
-/* RESPONSIVE */
-/* Mobile */
+/* KOHANDUV KUJUNDUS */
+/* Mobiil */
 @media (max-width: 991px) {
   .nav {
     padding: 0 8px;

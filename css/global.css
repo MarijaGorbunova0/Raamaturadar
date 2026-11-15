@@ -16,7 +16,7 @@
   --container-width: 1300px;
 }
 
-/* BASE*/
+/* BAAS */
 * {
   box-sizing: border-box;
 }
@@ -54,16 +54,16 @@ button {
   cursor: pointer;
 }
 
-/* LAYOUT */
-/* Shared container */
+/* PAIGUTUS */
+/* Jagatud konteiner */
 .container {
   width: calc(100% - 64px);
   max-width: var(--container-width);
   margin-inline: auto;
 }
 
-/* RESPONSIVE */
-/* Tablet */
+/* KOHANDUV KUJUNDUS */
+/* Tahvel */
 @media (max-width: 991px) {
   h1 {
     margin-top: 65px;
@@ -75,7 +75,7 @@ button {
   }
 }
 
-/* Mobile */
+/* Mobiil */
 @media (max-width: 575px) {
   .container {
     width: calc(100% - 32px);
