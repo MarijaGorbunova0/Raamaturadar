@@ -15,10 +15,12 @@
 
   --container-width: 1300px;
 }
+
 /* BASE*/
 * {
   box-sizing: border-box;
 }
+
 body {
   min-height: 100vh;
   display: flex;
