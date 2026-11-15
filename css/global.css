@@ -1,4 +1,12 @@
 :root {
+  --radius-card: 10px;
+  --radius-pill: 40px;
+
+  --spacing-section: 40px;
+  --spacing-card: 35px;
+
+  --transition-fast: 0.2s ease;
+
   --color-background: #121614;
   --color-text: #f2ece0;
   --color-text-secondary: #121614;

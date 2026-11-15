@@ -29,12 +29,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: row;
 }
 
 .nav-links {
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
   gap: 62px;
@@ -119,7 +117,7 @@
     color: var(--color-accent);
     font-size: 13px;
     font-weight: 600;
-    letter-spacing: 5%;
+    letter-spacing: 0.05em;
   }
 
   .pealkiri {
@@ -195,10 +193,10 @@
 }
 
 .card {
-  padding: 35px;
+  padding: var(--spacing-card);
   background-color: var(--color-component-background);
   flex-grow: 1;
-  border-radius: 10px;
+  border-radius: var(--radius-card);
 }
 
 .card-title {
@@ -223,7 +221,6 @@
   margin-left: auto;
   margin-top: 40px;
   display: flex;
-  flex-direction: row;
   align-items: end;
   gap: 8px;
 }
@@ -370,7 +367,6 @@
 
 .book-metadata-item {
   display: flex;
-  flex-direction: row;
   column-gap: 25px;
   padding-bottom: 10px;
 }
@@ -415,9 +411,6 @@
   .päeva-raamat {
     flex-direction: column;
     gap: 25px;
-  }
-  .pill-block {
-    grid-template-columns: 1fr;
   }
   .raamatu-vaade-layout {
     grid-template-columns: 1fr;
