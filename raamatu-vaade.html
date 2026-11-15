@@ -11,12 +11,31 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicons/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicons/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Raamaturadar" />
+    <link rel="manifest" href="/assets/favicons/site.webmanifest" />
+
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/components.css" />
 
     <title>Raamaturadar | Avasta</title>
   </head>
+
   <body>
     <!-- NAVIGATION -->
     <header class="site-header">
@@ -39,9 +58,56 @@
     <main>
       <div class="container">
         <section>
-          <div>Pealkiri</div>
+          <a href="/avasta.html" class="tagasi">
+            <img
+              src="assets/arrow-left.svg"
+              alt=""
+              class="tagasi-icon"
+              aria-hidden="true"
+            /><span>Tagasi</span></a
+          >
+          <div class="raamatu-vaade-layout">
+            <div class="raamatu-cover">
+              <img
+                alt="Raamatu kaanepilt puudub"
+                src="assets/book-cover-placeholder.svg"
+              />
+            </div>
+            <div class="raamatu-info">
+              <h1 class="raamatu-pealkiri">Raamatu pealkiri</h1>
+              <div class="card">
+                <div class="book-annotation">
+                  Raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus
+                  -raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus.
+                </div>
+                <div class="book-metadata-item">
+                  <div class="book-metadata-key">Autor</div>
+                  <div class="book-metadata-value">Autori Nimi</div>
+                </div>
+                <div class="book-metadata-item">
+                  <div class="book-metadata-key">Aasta</div>
+                  <div class="book-metadata-value">Aasta</div>
+                </div>
+                <div class="book-metadata-item">
+                  <div class="book-metadata-key">Žanr</div>
+                  <div class="book-metadata-value">Žanr</div>
+                </div>
+                <div class="book-metadata-item">
+                  <div class="book-metadata-key">Keel</div>
+                  <div class="book-metadata-value">Keel</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2026 Raamaturadar. Kõik õigused kaitstud.</p>
+      </div>
+    </footer>
   </body>
 </html>

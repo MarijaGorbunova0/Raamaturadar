@@ -1,4 +1,12 @@
 :root {
+  --radius-card: 10px;
+  --radius-pill: 40px;
+
+  --spacing-section: 40px;
+  --spacing-card: 35px;
+
+  --transition-fast: 0.2s ease;
+
   --color-background: #121614;
   --color-text: #f2ece0;
   --color-text-secondary: #121614;
@@ -12,6 +20,9 @@
   box-sizing: border-box;
 }
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   background-color: var(--color-background);
@@ -19,12 +30,26 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+main {
+  flex: 1;
+}
+
 h1 {
+  margin-top: 124px;
   font-size: 70px;
+}
+
+h2 {
+  margin-top: 124px;
+  font-size: 32px;
 }
 
 a {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* LAYOUT */
@@ -38,6 +63,11 @@ a {
 /* RESPONSIVE */
 /* Tablet */
 @media (max-width: 991px) {
+  h1 {
+    margin-top: 65px;
+    font-size: 45px;
+  }
+
   .container {
     width: calc(100% - 48px);
   }
