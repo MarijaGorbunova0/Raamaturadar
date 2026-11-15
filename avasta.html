@@ -37,34 +37,25 @@
     <title>Raamaturadar | Avasta</title>
   </head>
 
-  <!-- Tehisintellekti abi kasutati filtrite stiilide interaktsioonide loomiseks -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll(".pill-block").forEach((group) => {
-        group.addEventListener("click", (event) => {
-          const clickedPill = event.target.closest(".pill");
-
-          if (!clickedPill) return;
-
-          // Eemalda eelmine valik samast grupist
-          group.querySelectorAll(".pill").forEach((pill) => {
-            pill.classList.remove("pill--selected");
-            pill.setAttribute("aria-pressed", "false");
-          });
-
-          // Aktiveeri klikitud nupp
-          clickedPill.classList.add("pill--selected");
-          clickedPill.setAttribute("aria-pressed", "true");
-        });
-      });
-    });
-  </script>
-
   <body>
     <!-- NAVIGATSIOON -->
     <header class="site-header">
       <nav class="nav container">
         <a href="/" class="logo">Raamaturadar</a>
+
+        <!-- Mobiilivaate menüü -->
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Ava menüü"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         <div class="nav-links">
           <div>
             <a href="/index.html" class="nav-link">Avaleht</a>
@@ -146,5 +137,58 @@
         <p>&copy; 2026 Raamaturadar. Kõik õigused kaitstud.</p>
       </div>
     </footer>
+
+    <!-- Tehisintellekti abi kasutati interaktsioonide loomiseks -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // FILTRITE VALIMINE
+        document.querySelectorAll(".pill-block").forEach((group) => {
+          group.addEventListener("click", (event) => {
+            const clickedPill = event.target.closest(".pill");
+
+            if (!clickedPill) return;
+
+            // Eemalda eelmine valik samast grupist
+            group.querySelectorAll(".pill").forEach((pill) => {
+              pill.classList.remove("pill--selected");
+              pill.setAttribute("aria-pressed", "false");
+            });
+
+            // Aktiveeri klikitud nupp
+            clickedPill.classList.add("pill--selected");
+            clickedPill.setAttribute("aria-pressed", "true");
+          });
+        });
+
+        // MOBIILIMENÜÜ
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (menuToggle && navLinks) {
+          function setMenuOpen(isOpen) {
+            menuToggle.classList.toggle("is-open", isOpen);
+            navLinks.classList.toggle("is-open", isOpen);
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+            menuToggle.setAttribute(
+              "aria-label",
+              isOpen ? "Sulge menüü" : "Ava menüü",
+            );
+          }
+
+          menuToggle.addEventListener("click", () => {
+            setMenuOpen(!navLinks.classList.contains("is-open"));
+          });
+
+          navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => setMenuOpen(false));
+          });
+
+          document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") setMenuOpen(false);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
