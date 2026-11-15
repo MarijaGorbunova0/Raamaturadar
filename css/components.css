@@ -89,7 +89,8 @@
 }
 
 .btn {
-  margin-top: 55px;
+  display: inline-block;
+  margin-top: 25px;
   padding: 18px 30px;
   border-radius: 10px;
   border: 0;
@@ -98,6 +99,10 @@
   font-weight: 600;
   background-color: var(--color-accent);
   color: var(--color-text-secondary);
+}
+
+.btn:hover {
+  background: #e8b25c;
 }
 
 /* Päeva raamat */
@@ -140,25 +145,36 @@
 
   .vaata-lähemalt {
     margin-top: 36px;
-  }
-
-  .vaata-lähemalt-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     color: var(--color-accent);
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
   }
 
-  .vaata-lähemalt-link:hover {
-    color: #ac7e33;
+  .vaata-lähemalt-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
   }
 
-  .image {
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 15px;
+  .vaata-lähemalt:hover .vaata-lähemalt-icon {
+    transform: translateX(4px);
   }
 }
 
+.päeva-raamat img {
+  display: block;
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+}
+
+.päeva-raamat > div:first-child {
+  flex: 0 0 120px;
+}
 .päeva-raamat > div:last-child {
   flex: 1;
   min-width: 0;
@@ -169,7 +185,8 @@
 }
 
 .cards {
-  margin-top: 100px;
+  margin-top: 45px;
+  margin-bottom: 40px;
   display: flex;
   column-gap: 35px;
   row-gap: 20px;
@@ -204,6 +221,7 @@
 .avasta-raamat-filtrid-nupud {
   grid-column: 1 / -1;
   margin-left: auto;
+  margin-top: 40px;
   display: flex;
   flex-direction: row;
   align-items: end;
@@ -380,6 +398,9 @@
   .nav-links {
     gap: 45px;
   }
+  .hero-text {
+    font-size: 20px;
+  }
   .avasta-raamat-filtrid {
     grid-template-columns: 1fr;
   }
@@ -390,6 +411,10 @@
     flex-direction: column;
     align-items: stretch;
     gap: 32px;
+  }
+  .päeva-raamat {
+    flex-direction: column;
+    gap: 25px;
   }
   .pill-block {
     grid-template-columns: 1fr;
