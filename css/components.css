@@ -394,6 +394,9 @@
   .nav-links {
     gap: 45px;
   }
+  .hero {
+    gap: 100px;
+  }
   .hero-text {
     font-size: 20px;
   }
