@@ -79,55 +79,102 @@
           <div class="card avasta-raamat-filtrid">
             <div>
               <div class="card-title">Žanr:</div>
-              <div class="pill-block">
-                <button type="button" class="pill pill--selected">
+              <div class="pill-block" data-filter="zanr">
+                <button type="button" class="pill pill--selected" data-value="">
                   Kõik žanrid
                 </button>
-                <button type="button" class="pill">Fiction</button>
-                <button type="button" class="pill">Thrillers</button>
-                <button type="button" class="pill">Mystery</button>
-                <button type="button" class="pill">Romance</button>
-                <button type="button" class="pill">Drama</button>
-                <button type="button" class="pill">Fantasy</button>
-                <button type="button" class="pill">Non-fiction</button>
-                <button type="button" class="pill">
-                  Historical Fiction Fiction
+                <button type="button" class="pill" data-value="fiction">
+                  Fiction
+                </button>
+                <button type="button" class="pill" data-value="thrillers">
+                  Thrillers
+                </button>
+                <button type="button" class="pill" data-value="mystery">
+                  Mystery
+                </button>
+                <button type="button" class="pill" data-value="romance">
+                  Romance
+                </button>
+                <button type="button" class="pill" data-value="drama">
+                  Drama
+                </button>
+                <button type="button" class="pill" data-value="fantasy">
+                  Fantasy
+                </button>
+                <button type="button" class="pill" data-value="nonfiction">
+                  Non-fiction
+                </button>
+                <button
+                  type="button"
+                  class="pill"
+                  data-value="historical fiction"
+                >
+                  Historical Fiction
                 </button>
               </div>
             </div>
             <div>
               <div class="card-title">Keel:</div>
-              <div class="pill-block">
-                <button type="button" class="pill pill--selected">
+              <div class="pill-block" data-filter="keel">
+                <button type="button" class="pill pill--selected" data-value="">
                   Kõik keeled
                 </button>
-                <button type="button" class="pill">Inglise</button>
-                <button type="button" class="pill">Eesti</button>
-                <button type="button" class="pill">Saksa</button>
-                <button type="button" class="pill">Prantsuse</button>
-                <button type="button" class="pill">Hispaania</button>
+                <button type="button" class="pill" data-value="eng">
+                  Inglise
+                </button>
+                <button type="button" class="pill" data-value="est">
+                  Eesti
+                </button>
+                <button type="button" class="pill" data-value="ger">
+                  Saksa
+                </button>
+                <button type="button" class="pill" data-value="fre">
+                  Prantsuse
+                </button>
+                <button type="button" class="pill" data-value="rus">
+                  Vene
+                </button>
+                <button type="button" class="pill" data-value="fin">
+                  Soome
+                </button>
+                <button type="button" class="pill" data-value="ukr">
+                  Ukraina
+                </button>
               </div>
             </div>
             <div>
               <div class="card-title">Ilmumisaasta:</div>
-              <div class="pill-block">
-                <button type="button" class="pill pill--selected">
+              <div class="pill-block" data-filter="aasta">
+                <button type="button" class="pill pill--selected" data-value="">
                   Kõik aastad
                 </button>
-                <button type="button" class="pill">2020+</button>
-                <button type="button" class="pill">2010-2019</button>
-                <button type="button" class="pill">2000-2009</button>
-                <button type="button" class="pill">1900-1999</button>
+                <button type="button" class="pill" data-value="2020-*">
+                  2020+
+                </button>
+                <button type="button" class="pill" data-value="2010-2019">
+                  2010-2019
+                </button>
+                <button type="button" class="pill" data-value="2000-2009">
+                  2000-2009
+                </button>
+                <button type="button" class="pill" data-value="1900-1999">
+                  1900-1999
+                </button>
               </div>
             </div>
             <div class="avasta-raamat-filtrid-nupud">
-              <button type="button" class="pill">Feeling lucky</button>
-              <button type="button" class="pill pill--filled">
+              <button type="button" class="pill" id="feeling-lucky">
+                Feeling lucky
+              </button>
+              <button type="button" class="pill pill--filled" id="leia-raamat">
                 Leia raamat
               </button>
             </div>
           </div>
         </section>
+
+        <!-- TULEMUS -->
+        <section class="avasta-tulemus" id="tulemus" aria-live="polite"></section>
       </div>
     </main>
 
@@ -139,6 +186,8 @@
     </footer>
 
     <!-- Tehisintellekti abi kasutati interaktsioonide loomiseks -->
+    <script src="js/keeled.js" defer></script>
+    <script src="js/avasta.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         // FILTRITE VALIMINE
