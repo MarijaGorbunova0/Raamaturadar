@@ -81,35 +81,36 @@
               aria-hidden="true"
             /><span>Tagasi</span></a
           >
-          <div class="raamatu-vaade-layout">
+          <p class="raamatu-teade" id="raamatu-teade" aria-live="polite">
+            Laadin raamatu andmeid…
+          </p>
+          <div class="raamatu-vaade-layout" id="raamatu-vaade" hidden>
             <div class="raamatu-cover">
               <img
+                id="raamatu-kaas"
                 alt="Raamatu kaanepilt puudub"
                 src="assets/book-cover-placeholder.svg"
               />
             </div>
             <div class="raamatu-info">
-              <h1 class="raamatu-pealkiri">Raamatu pealkiri</h1>
+              <h1 class="raamatu-pealkiri" id="raamatu-pealkiri"></h1>
               <div class="card">
-                <div class="book-annotation">
-                  Raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus
-                  -raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus-raamatukirjeldus-tutvustus.
-                </div>
+                <div class="book-annotation" id="raamatu-kirjeldus"></div>
                 <div class="book-metadata-item">
                   <div class="book-metadata-key">Autor</div>
-                  <div class="book-metadata-value">Autori Nimi</div>
+                  <div class="book-metadata-value" id="raamatu-autor"></div>
                 </div>
                 <div class="book-metadata-item">
                   <div class="book-metadata-key">Aasta</div>
-                  <div class="book-metadata-value">Aasta</div>
+                  <div class="book-metadata-value" id="raamatu-aasta"></div>
                 </div>
                 <div class="book-metadata-item">
                   <div class="book-metadata-key">Žanr</div>
-                  <div class="book-metadata-value">Žanr</div>
+                  <div class="book-metadata-value" id="raamatu-zanr"></div>
                 </div>
                 <div class="book-metadata-item">
                   <div class="book-metadata-key">Keel</div>
-                  <div class="book-metadata-value">Keel</div>
+                  <div class="book-metadata-value" id="raamatu-keel"></div>
                 </div>
               </div>
             </div>
@@ -125,6 +126,8 @@
       </div>
     </footer>
 
+    <script src="js/keeled.js" defer></script>
+    <script src="js/raamatu-vaade.js" defer></script>
     <!-- Tehisintellekti abi kasutati kohanduva menüü stiilide interaktsioonide loomiseks -->
     <script>
       const menuToggle = document.querySelector(".menu-toggle");

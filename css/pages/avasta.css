@@ -35,3 +35,88 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* TULEMUS */
+.avasta-tulemus {
+  margin-bottom: 80px;
+}
+
+.avasta-tulemus:empty {
+  display: none;
+}
+
+.avasta-teade {
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.avasta-raamat {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+}
+
+.avasta-raamat-kaas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.avasta-raamat-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.avasta-raamat-pealkiri {
+  margin: 0 0 24px 0;
+  font-size: 36px;
+  overflow-wrap: anywhere;
+}
+
+.avasta-raamat .book-metadata-item {
+  display: flex;
+  column-gap: 25px;
+  padding-bottom: 10px;
+}
+
+.avasta-raamat .book-metadata-key {
+  width: 50px;
+  flex-shrink: 0;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.avasta-raamat .book-metadata-value {
+  font-weight: 300;
+  overflow-wrap: anywhere;
+}
+
+.avasta-raamat-link {
+  margin-top: 24px;
+}
+
+.avasta-raamat-filtrid-nupud .pill:disabled {
+  opacity: 0.6;
+  cursor: wait;
+  animation: none;
+}
+
+@media (max-width: 575px) {
+  .avasta-raamat {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .avasta-raamat-kaas {
+    max-width: 200px;
+    margin-inline: auto;
+  }
+
+  .avasta-raamat-pealkiri {
+    font-size: 28px;
+  }
+}

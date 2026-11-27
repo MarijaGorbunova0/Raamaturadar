@@ -91,3 +91,18 @@
     margin-inline: auto;
   }
 }
+
+/* ANDMETE LAADIMINE */
+.raamatu-vaade-layout[hidden],
+.raamatu-teade[hidden] {
+  display: none;
+}
+
+.raamatu-teade {
+  margin: 60px 0 80px 0;
+  font-size: 18px;
+}
+
+.book-annotation {
+  white-space: pre-line;
+}
